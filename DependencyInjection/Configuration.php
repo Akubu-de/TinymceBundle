@@ -70,6 +70,12 @@ class Configuration implements ConfigurationInterface
                             ->end()
                         ->end()
                     ->end()
+                    ->arrayNode('settings')
+                        ->children()
+                            ->booleanNode('allow_script_urls')->end()
+                            ->scalarNode('extended_valid_elements')->end()
+                        ->end()
+                    ->end()
                 ->end()
             ->end();
     }
