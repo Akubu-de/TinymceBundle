@@ -91,6 +91,9 @@ function initTinyMCE(options) {
                     }
                 }
             }
+
+            settings = {...settings, ...options.settings};
+
             // Initialize textarea by its ID attribute
             tinymce
                 .createEditor(textareas[i].getAttribute('id'), settings)
